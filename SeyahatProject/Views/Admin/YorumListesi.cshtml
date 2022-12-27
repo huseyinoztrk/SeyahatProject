@@ -1,0 +1,29 @@
+﻿@model List<Yorumlar>
+@{
+    ViewData["Title"] = "YorumListesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yorum Listesi</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <td>ID</td>
+        <td>Kullanıcı</td>
+        <td>Mail</td>
+        <td>Yorum</td>
+        <td>Blog</td>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.KullaniciAdi</td>
+            <td>@x.Mail</td>
+            <td>@x.Yorum</td>
+            <td>@x.Blogid</td>
+            <td><a href="/Admin/YorumSil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/YorumGetir/@x.ID" class="btn btn-info">Güncelle</a></td>
+        </tr>
+    }
+</table>

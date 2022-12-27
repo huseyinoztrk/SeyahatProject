@@ -1,0 +1,29 @@
+﻿@model List<Admin>
+@{
+    ViewData["Title"] = "Adminler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Adminler</h1>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>KULLANICI ADI</th>
+        <th>ŞİFRE</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Kullanici</td>
+            <td>@x.Sifre</td>
+            <td><a href="/Admin/AdminSil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/AdminGetir/@x.ID" class="btn btn-info">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniAdmin/" class="btn btn-primary">Yeni Admin</a>

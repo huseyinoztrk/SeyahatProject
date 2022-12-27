@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="contact">
+    <div class="wrap">
+        <div class="contact-top">
+            <h3>İletişim Bilgileri</h3>
+            <p> Benimle iletişime geçmek için aşağıdaki alanları doldurunuz. Sizlerin geri dönüşleri benim için çok önemlidir. Yaşadığınız sorunu veya bana iletmek istediğiniz mesajları iletebilirsiniz.</p>
+        </div>
+        <div class="form">
+            <form class="cmxform" id="contactForm" method="post" action="/Contact/iletisimGonder">
+                <div>
+                    <input type="text" class="textbox" placeholder="İsim Soyisim:" name="AdSoyad" required">
+                </div>
+                <div>
+                    <input type="text" class="textbox" placeholder="Email:" name="Mail" required>
+                </div>
+                <div>
+                    <input type="text" class="textbox" placeholder="Telefon:" name="Konu" required>
+                </div>
+                <div class="form1">
+                    <textarea style="width:302px; height:100px;" value="Message:" placeholder="Mesajınızı Yazınız:" name="Mesaj"></textarea>
+                </div>
+                <div>
+                    <input style="background-color: #04AA6D; border: none; color: white; padding: 16px 32px; text-decoration: none; margin: 4px 2px; cursor: pointer;" type="submit" value="Gönder" />
+                </div>
+            </form>
+        </div>
+        <div class="form1">
+            <div>
+                <img src="~/images/phone.jpg" />
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="contact-bottom">
+            <div class="contact-left">
+                <div class="contact-add">
+                    <h3>Adres Bilgilerim</h3>
+                    <p> Sakarya - Türkiye</p>
+                    <p>Fax:0-00-000</p>
+                    <p>Email:<a href="huseyin.ozturk10@ogr.sakarya.edu.tr">huseyin.ozturk10@ogr.sakarya.edu.tr</a></p>
+                </div>
+                <div class="contact-add">
+                    <h3>İkinci Adres</h3>
+                    <p>Telefon:000 000 000</p>
+                    <p>Fax:0-00-001</p>
+                    <p>Email:<a href="huseyinozturk911@gmail.com">huseyinozturk911@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="contact-map">
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+

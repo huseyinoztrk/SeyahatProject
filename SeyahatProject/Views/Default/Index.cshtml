@@ -1,0 +1,118 @@
+﻿@model List<Blog>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px;">Tatil & Seyahat Blogum</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://www.neredenekadarayenir.com/p/mekan-ara.html">
+                                    <p>Restorantlar</p>
+                                </a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://www.enuygun.com/ucak-bileti/">
+                                    <p>Uçuşlar</p>
+                                </a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://melkeontheroad.com/kategori/kamp/kamp-tavsiyeleri">
+                                    <p>Aktiviteler</p>
+                                </a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <a href="https://www.avis.com.tr/">
+                                    <p>Araç Kiralama</p>
+                                </a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:640px; height:360px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var x in Model)
+                                {
+                                    <li><img src="@x.BlogImage" alt=""></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Seyahat Bloğuma Hoş Geldiniz</h3>
+                    <p><h4>Hepiniz blog sayfama hoş geldiniz. Seyahat etmeyi ve gezmeyi çok seviyorum. Bu sitede gezip gördüğüm ve sizlerinde görmesini istediğim yerler bulunmaktadır. Resimlerle ve blog yazılarımla seyahat ettiğim ve sizlerin bana önereceği gezmelik yerler bulunmaktadır. Ayriyeten sizlerin de gezip gördüğü bizlere tavsiye etmek istediği yerleri blog siteme paylaşmaktan gurur duyuyorum. Sizlerde gezdiğiniz yerleri, bilgilerini ve resimlerini bizlerle paylaşabilirsiniz. Umarım ki yazdıklarımı beğenirsiniz, keyifli okumalar ve keyifli günler dilerim.</h4></p>
+                </div>
+
+
+                <div class="con-bot">
+
+                    @await Component.InvokeAsync("HomePartial")
+
+                    @await Component.InvokeAsync("HomeRightPartial")
+
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="grids">
+                    <div class="box1">
+                        @await Component.InvokeAsync("HomeSidePartial")
+                        <div class="padding1">
+                            <h4>En Beğendiğim Yerler</h4>
+                            <div class="box-left">
+                                @await Component.InvokeAsync("HomeOutBestPartial")
+                                @await Component.InvokeAsync("HomeFooterRightPartial")
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

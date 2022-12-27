@@ -1,0 +1,21 @@
+﻿@model List<Blog>
+
+
+@foreach (var x in Model)
+{
+    <div class="bot-img">
+        <img src="@x.BlogImage" alt="" />
+    </div>
+    <div class="bot-desc">
+        @if (@x.Aciklama.Length >= 70)
+        {
+            <p>@x.Aciklama.Substring(0, 70)</p>
+        }
+        else
+        {
+            <p>@x.Aciklama</p>
+        }
+    </div>
+    <div class="clear"></div>
+}
+    </div>

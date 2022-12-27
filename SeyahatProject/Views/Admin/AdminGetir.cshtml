@@ -1,0 +1,21 @@
+﻿@model Admin
+@{
+    ViewData["Title"] = "AdminGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Admin Güncelleme Sayfası</h1>
+
+@using (Html.BeginForm("AdminGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x=>x.ID)
+    @Html.TextBoxFor(x=>x.ID, new{@class="form-control",@readonly="readonly"})
+        <br />
+    @Html.LabelFor(x=>x.Kullanici)
+    @Html.TextBoxFor(x=>x.Kullanici, new{@class="form-control"})
+        <br />
+    @Html.LabelFor(x=>x.Sifre)
+    @Html.TextBoxFor(x=>x.Sifre, new{@class="form-control"})
+    <br />
+        <button class="btn btn-success">Admin Güncelle</button>
+}

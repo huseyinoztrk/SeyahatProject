@@ -1,0 +1,33 @@
+﻿@model List<iletisim>
+@{
+    ViewData["Title"] = "iletisim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>İletişim</h1>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>KULLANICI ADI</th>
+        <th>MAİL</th>
+        <th>TELEFON</th>
+        <th>MESAJ</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.AdSoyad</td>
+            <td>@x.Mail</td>
+            <td>@x.Konu</td>
+            <td>@x.Mesaj</td>
+            <td><a href="/Admin/iletisimSil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/iletisimGetir/@x.ID" class="btn btn-info">Güncelle</a></td>
+        </tr>
+    }
+</table>
+

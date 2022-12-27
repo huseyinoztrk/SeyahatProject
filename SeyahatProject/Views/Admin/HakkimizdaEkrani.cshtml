@@ -1,0 +1,29 @@
+﻿@model List<Hakkimizda>
+@{
+    ViewData["Title"] = "HakkimizdaEkrani";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Hakkımızda</h1>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>FOTO URL</th>
+        <th>AÇIKLAMA</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.FotoUrl</td>
+            <td>@x.Aciklama</td>
+            <td><a href="/Admin/Hakkimizda/@x.ID" class="btn btn-info">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+
+
