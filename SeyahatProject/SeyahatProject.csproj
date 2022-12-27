@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\bootstrap.css" />
+    <Content Remove="wwwroot\css\style1.css" />
+    <Content Remove="wwwroot\images\avatar.png" />
+    <Content Remove="wwwroot\images\b4.jpg" />
+    <Content Remove="wwwroot\images\icon3.png" />
+    <Content Remove="wwwroot\images\logo.jpg" />
+    <Content Remove="wwwroot\images\man.jpg" />
+    <Content Remove="wwwroot\images\more.png" />
+    <Content Remove="wwwroot\images\post1.jpg" />
+    <Content Remove="wwwroot\images\post2.jpg" />
+    <Content Remove="wwwroot\images\post3.jpg" />
+    <Content Remove="wwwroot\images\search.png" />
+    <Content Remove="wwwroot\js\easing.js" />
+    <Content Remove="wwwroot\js\move-top.js" />
+    <Content Remove="wwwroot\lib\style2.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\bootstrap.css" />
+    <None Include="wwwroot\css\style1.css" />
+    <None Include="wwwroot\images\avatar.png" />
+    <None Include="wwwroot\images\b4.jpg" />
+    <None Include="wwwroot\images\icon3.png" />
+    <None Include="wwwroot\images\logo.jpg" />
+    <None Include="wwwroot\images\man.jpg" />
+    <None Include="wwwroot\images\more.png" />
+    <None Include="wwwroot\images\post1.jpg" />
+    <None Include="wwwroot\images\post2.jpg" />
+    <None Include="wwwroot\images\post3.jpg" />
+    <None Include="wwwroot\images\search.png" />
+    <None Include="wwwroot\js\easing.js" />
+    <None Include="wwwroot\js\move-top.js" />
+    <None Include="wwwroot\css\style2.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="5.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.1" />
+    <PackageReference Include="System.Security.Claims" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
