@@ -1,7 +1,9 @@
-﻿<!DOCTYPE HTML>
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localize
+
+<!DOCTYPE HTML>
 <html>
 <head>
-    <title>Free Easy-Trip Website Template | Home :: w3layouts</title>
+    <title>Tatil & Seyahat Blogu</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="~/css/style.css" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,9 +12,9 @@
     <script src="~/js/responsiveslides.min.js"></script>
 
     <script>
-        // You can also use "$(window).load(function() {"
+
         $(function () {
-            // Slideshow 1
+
             $("#slider1").responsiveSlides({
                 auto: true,
                 nav: true,
@@ -23,7 +25,12 @@
     </script>
 </head>
 <body>
+
     <div class="header">
+        <div class="header" style="position: absolute; right: 0px; top: 0px;">
+            <partial name="_Language" />
+        </div>
+
         <div class="wrap">
             <div class="logo"><a><img src="~/images/logo.png" alt="" /></a></div>
             <div class="con-right">
@@ -36,30 +43,31 @@
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
+
         </div>
     </div>
     <div class="header-bottom">
         <div class="wrap">
             <ul id="nav">
-                <li><a href="/Default/Index/">Ana Sayfa</a></li>
-                <li><a class="hsubs" href="/About/Index/">Hakkımızda</a></li>
+                <li><a href="/Default/Index/">@localize["anasayfa"]</a></li>
+                <li><a class="hsubs" href="/About/Index/">@localize["hakkimizda"]</a></li>
                 <li>
-                    <a class="hsubs" href="/Photo/Index">Resimler</a>
+                    <a class="hsubs" href="/Photo/Index">@localize["resimler"]</a>
                 </li>
-                <li><a class="hsubs" href="/Blog/Index">Blogum</a></li>
-                <li><a href="/Contact/Index">İletişim</a></li>
+                <li><a class="hsubs" href="/Blog/Index">@localize["blogum"]</a></li>
+                <li><a href="/Contact/Index">@localize["iletişim"]</a></li>
             </ul>
         </div>
     </div>
 
     <div class="content">
-    @RenderBody()
-       
+        @RenderBody()
+
     </div>
     <div class="footer-bottom">
         <div class="wrap">
             <div class="copy">
-                <p>&copy; 2022 Seyahat Rehberi. Tüm hakları saklıdır. | Design by <a href="http://w3layouts.com">W3Layouts</a></p>
+                <p>@localize["footerinfo"] <a href="http://w3layouts.com">W3Layouts</a></p>
             </div>
         </div>
     </div>
